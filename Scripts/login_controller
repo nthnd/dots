@@ -1,0 +1,4 @@
+#!/bin/bash
+options="poweroff\nreboot\nsuspend\n"
+choice=$( echo -e $options | rofi -dmenu -l 3 -p "action")
+exec sudo loginctl $choice
