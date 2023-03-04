@@ -1,0 +1,11 @@
+#!/bin/bash
+
+x=300
+y=225
+
+gap=16
+
+left=$((1366-$x-$gap))
+top=$((768-$y-$gap))
+
+ffplay -an -x $x -y $y -left $left -top $top -fflags nobuffer -flags low_delay -framedrop /dev/video0 2>/dev/null

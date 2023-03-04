@@ -1,0 +1,7 @@
+#!/bin/bash
+
+options="off\non"
+
+choice=$(echo -e $options | rofi -dmenu -l 2 -p "Wi-Fi")
+
+sudo nmcli radio wifi $choice

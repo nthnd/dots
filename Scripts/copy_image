@@ -1,0 +1,7 @@
+#!/bin/bash
+
+image_path=$1
+
+xclip -selection clipbaord -t image/png $image_path &&
+    notify-send "Image copied to clipboard" "${image_path}"  || 
+    notify-send "Couldn't copy image to clipboard" "${image_path}"  

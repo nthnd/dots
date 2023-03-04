@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+out="$HOME/Media/videos/"$(date +%y-%m-%d_%T)'.webm'
+
+
+notify-send 'Recording started' 
+
+ffmpeg -framerate 60 -f x11grab -i :0.0 -crf 25 -pix_fmt yuv420p $out 2>/dev/null
+
+notify-send 'Recording stopped' "file saved to ${out}"
+
