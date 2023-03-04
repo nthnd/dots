@@ -1,0 +1,18 @@
+#!/bin/bash
+alias l='ls --color=always --classify --file-type --no-group --group-directories-first'
+alias la='l -a'
+alias ll='l -l'
+
+alias v='nvim'
+
+alias pfetch="PF_COL1=5 PF_INFO='ascii os host kernel uptime memory pkgs editor' pfetch"
+
+alias nd="notify-send -u low 'Task done' 'check your terminal'"
+alias nf="notify-send -u critical 'Task failed' 'check your terminal'"
+alias report="nd || nf"
+
+alias dots='/usr/bin/git --git-dir=$HOME/dots/ --work-tree=$HOME'
+
+c() {
+	cd "${@}" && l
+}

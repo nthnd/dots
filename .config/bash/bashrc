@@ -1,0 +1,7 @@
+source ~/.config/bash/ps1
+source ~/.config/bash/aliases
+
+. "$HOME/.cargo/env"
+export HISTSIZE=10000
+
+set -o vi mode
