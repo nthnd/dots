@@ -1,8 +1,0 @@
-#!/bin/bash
-
-volume=$(pacmd list-sinks |
-    grep 'volume: front-left' |
-    awk '{print $5}' |
-    sed 's/\%//g')
-
-notify-send -u low "Volume" -h int:value:"${volume}"
