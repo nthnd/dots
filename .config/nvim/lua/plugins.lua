@@ -121,6 +121,16 @@ return require('packer').startup(function(use)
     use { 'bluz71/vim-moonfly-colors', as = 'moonfly' }
 
     use {
+        "nvim-neotest/neotest",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-treesitter/nvim-treesitter",
+            "antoinemadec/FixCursorHold.nvim",
+            "rouge8/neotest-rust"
+        }
+    }
+
+    use {
         'windwp/nvim-autopairs',
         config = function() require('nvim-autopairs').setup {} end
     }

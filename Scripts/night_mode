@@ -1,0 +1,6 @@
+#!/bin/sh 
+
+case $1 in 
+  off) xrandr --output eDP-1  --gamma 1:1:1 ;; 
+  *) xrandr --output eDP-1 --gamma  1:0.9:0.7 ;;
+esac
